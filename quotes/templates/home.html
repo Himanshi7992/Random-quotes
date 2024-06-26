@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        #quote {
+            font-size: 1.2em;
+            font-style: arabic;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="quote">
+
+        <header>
+            <h1>Thought of the day </h1>
+        </header> 
+
+        {% if quote %}
+            "{{ quote.text }}"  <br> -{{ quote.author }}
+        {% else %}
+            <p>No quotes available.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
