@@ -1,7 +1,11 @@
 from django.contrib import admin
-from .models import Quotes
+from .models import Quote, DailyQuote
 
-class QuotesAdmin(admin.ModelAdmin):
+class QuoteAdmin(admin.ModelAdmin):
     list_display = ('text', 'author')
 
-admin.site.register(Quotes, QuotesAdmin)
+class DailyQuoteAdmin(admin.ModelAdmin):
+    list_display = ('quote', 'day_of_year')
+
+admin.site.register(Quote, QuoteAdmin)
+admin.site.register(DailyQuote, DailyQuoteAdmin)

@@ -1,13 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+
     <style>
         #quote {
             font-size: 1.2em;
-            font-style: arabic;
+            font-style: normal ;
             margin-top: 20px;
             text-align: center;
         }
@@ -18,14 +20,10 @@
     <div id="quote">
 
         <header>
-            <h1>Thought of the day </h1>
-        </header> 
-
-        {% if quote %}
-            "{{ quote.text }}"  <br> -{{ quote.author }}
-        {% else %}
-            <p>No quotes available.</p>
-        {% endif %}
+            <h1>Thought of the Day</h1>
+        </header>
+    
+    <p>{{ quote.quote }} <br> - <em>{{ quote.author }}</em></p>
     </div>
 </body>
 </html>
